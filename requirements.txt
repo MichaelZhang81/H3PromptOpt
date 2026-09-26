@@ -1,0 +1,10 @@
+# H3PromptOpt 依赖
+# 注意：PyPI 上的 llama-cpp-python 新版只有 CPU-only wheel（supports_gpu_offload=False）；
+# CUDA 版预编译包在本机便携版根目录 whl/ 下，安装命令：
+#   ./python_embeded/python.exe -m pip install --no-deps --force-reinstall --no-index whl/llama_cpp_python-0.3.48+cu130-cp313-cp313-win_amd64.whl
+# Qwen3.8-27B（3:1 SSM 混合架构）要求 llama_cpp >= 0.3.43，低于该版本加载时报
+# missing tensor 'blk.*.ssm_conv1d.weight'。
+llama-cpp-python>=0.3.43
+
+# 以下由 ComfyUI 便携版环境自带（python_embeded），无需安装：
+#   av  Pillow  numpy  torch

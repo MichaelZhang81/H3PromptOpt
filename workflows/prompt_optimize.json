@@ -1,0 +1,44 @@
+{
+  "1": {
+    "class_type": "H3_OptMediaInput",
+    "inputs": {
+      "prompt": "",
+      "duration": 5.0,
+      "output_language": "中文",
+      "picture_1": "",
+      "picture_2": "",
+      "picture_3": "",
+      "picture_4": "",
+      "picture_5": "",
+      "picture_6": "",
+      "picture_7": "",
+      "picture_8": "",
+      "picture_9": "",
+      "video_1": "",
+      "video_2": "",
+      "video_3": "",
+      "audio_1": "",
+      "audio_2": "",
+      "audio_3": ""
+    }
+  },
+  "2": {
+    "class_type": "H3_OptLocalRun",
+    "inputs": {
+      "request": ["1", 0],
+      "model_file": "Qwen3.8-27B-UD-Q2_K_XL.gguf",
+      "mmproj_file": "mmproj-Qwen3.8-27B-F16.gguf",
+      "device": "cuda",
+      "max_tokens": 4096,
+      "keep_loaded": false
+    }
+  },
+  "3": {
+    "class_type": "SaveText",
+    "inputs": {
+      "text": ["2", 0],
+      "filename_prefix": "h3promptopt",
+      "format": "txt"
+    }
+  }
+}
